@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4C14DD74-C7A9-5BA5-F31A-8DB8DE273B2E}</ProjectGuid>
+    <ProjectGuid>{4FF94FC0-061B-A348-C9B5-82009C75222A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,20 +57,8 @@
      <Compile Include="Assets\Scripts\QuitOnClick.cs" />
      <Compile Include="Assets\Scripts\QuitOnEnter.cs" />
      <Compile Include="Assets\Scripts\SelectOnInput.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\ActiveStateToggler.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\ApplicationManager.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\ChangeColor.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\DragMe.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\DragPanel.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\DropMe.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\PanelManager.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\ResizePanel.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\ScrollDetailTexture.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\ShowSliderValue.cs" />
-     <Compile Include="Assets\Unity UISample\Scripts\TiltWindow.cs" />
-     <None Include="Assets\Unity UISample\Fonts\Jupiter\LICENSE.txt" />
-     <None Include="Assets\Unity UISample\Textures and Sprites\SF UI\Background\LICENSE.txt" />
-     <None Include="Assets\Unity UISample\Materials\UI-Default-No-Alpha.shader" />
+     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\Sprites\SF UI\Background\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
