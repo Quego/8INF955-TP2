@@ -57,6 +57,8 @@
      <Compile Include="Assets\Scripts\QuitOnClick.cs" />
      <Compile Include="Assets\Scripts\QuitOnEnter.cs" />
      <Compile Include="Assets\Scripts\SelectOnInput.cs" />
+     <Compile Include="Assets\Scripts\SetEFXVolume.cs" />
+     <Compile Include="Assets\Scripts\SetMusicVolume.cs" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Sprites\SF UI\Background\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">
