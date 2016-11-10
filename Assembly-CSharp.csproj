@@ -45,20 +45,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ChangeMusic.cs" />
-     <Compile Include="Assets\Scripts\ClickToLoadAsync.cs" />
-     <Compile Include="Assets\Scripts\CloseOnQuit.cs" />
-     <Compile Include="Assets\Scripts\ColorOnHighlight.cs" />
-     <Compile Include="Assets\Scripts\DesactiveOnWait.cs" />
-     <Compile Include="Assets\Scripts\DontDestroy.cs" />
-     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
-     <Compile Include="Assets\Scripts\LoadOnEnter.cs" />
-     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
-     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
-     <Compile Include="Assets\Scripts\QuitOnEnter.cs" />
-     <Compile Include="Assets\Scripts\SelectOnInput.cs" />
-     <Compile Include="Assets\Scripts\SetEFXVolume.cs" />
-     <Compile Include="Assets\Scripts\SetMusicVolume.cs" />
+     <Compile Include="Assets\Scripts\Game\BuildingManagement.cs" />
+     <Compile Include="Assets\Scripts\Game\BuildingProperties.cs" />
+     <Compile Include="Assets\Scripts\Game\ChangeUiOnSelect.cs" />
+     <Compile Include="Assets\Scripts\Game\FighterController.cs" />
+     <Compile Include="Assets\Scripts\Game\GatherController.cs" />
+     <Compile Include="Assets\Scripts\Game\HandlePause.cs" />
+     <Compile Include="Assets\Scripts\Game\InputController.cs" />
+     <Compile Include="Assets\Scripts\Game\MouseOverCanvas.cs" />
+     <Compile Include="Assets\Scripts\Game\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\Game\ResourceProperties.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitController.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitManagement.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitProperties.cs" />
+     <Compile Include="Assets\Scripts\UI\ChangeMusic.cs" />
+     <Compile Include="Assets\Scripts\UI\ClickToLoadAsync.cs" />
+     <Compile Include="Assets\Scripts\UI\CloseOnQuit.cs" />
+     <Compile Include="Assets\Scripts\UI\ColorOnHighlight.cs" />
+     <Compile Include="Assets\Scripts\UI\DesactiveOnWait.cs" />
+     <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadOnClick.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadOnEnter.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadSceneOnClick.cs" />
+     <Compile Include="Assets\Scripts\UI\QuitOnClick.cs" />
+     <Compile Include="Assets\Scripts\UI\QuitOnEnter.cs" />
+     <Compile Include="Assets\Scripts\UI\SelectOnInput.cs" />
+     <Compile Include="Assets\Scripts\UI\SetEFXVolume.cs" />
+     <Compile Include="Assets\Scripts\UI\SetMusicVolume.cs" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Sprites\SF UI\Background\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">
