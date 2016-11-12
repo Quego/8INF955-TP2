@@ -12,7 +12,6 @@ public class HandlePause : MonoBehaviour {
 	private float previousTimeScale;
 
 	void Awake () {
-		Debug.Log ("handle pause awake");
 		//Pause the game by disabling all custom scripts
 		previousTimeScale=Time.timeScale;
 		Time.timeScale = 0;

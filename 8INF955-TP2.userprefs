@@ -1,18 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game\BuildingManagement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game\FighterController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Game\UnitController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\ResourceProperties.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\InputController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\BuildingManagement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\BuildingProperties.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\UnitManagement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\PlayerData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\UnitProperties.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\FighterController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\GatherController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game\ChangeUiOnSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\FighterController.cs" Line="31" Column="24" />
+      <File FileName="Assets\Scripts\Game\EnemyUnitBuilder.cs" Line="23" Column="41" />
+      <File FileName="Assets\Scripts\Game\EnemyUnitController.cs" Line="73" Column="149" />
+      <File FileName="Assets\Scripts\Game\InputController.cs" Line="141" Column="1" />
+      <File FileName="Assets\Scripts\Game\UnitController.cs" Line="42" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

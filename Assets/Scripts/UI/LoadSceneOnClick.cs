@@ -15,7 +15,6 @@ public class LoadSceneOnClick : MonoBehaviour {
 	}
 
 	public void loadAdditiveByName(string sceneName){
-		Debug.Log ("loadAddictiveByName");
 		SceneManager.LoadScene (sceneName, LoadSceneMode.Additive);
 	}
 }

@@ -6,15 +6,15 @@ public class FighterController : MonoBehaviour {
 	public GameObject target;
 	public bool hasNewTarget;
 
-	private UnitProperties tagetProp;
-	private BuildingProperties tagetBuildingProp;
+	private UnitProperties tragetProp;
+	private BuildingProperties tragetBuildingProp;
 	private UnitProperties fighterProp;
 	private float nextActionTime;
 
 	// Use this for initialization
 	void Start () {
-		tagetProp = null;
-		tagetBuildingProp = null;
+		tragetProp = null;
+		tragetBuildingProp = null;
 		fighterProp = null;
 		hasNewTarget = false;
 	}
@@ -22,18 +22,18 @@ public class FighterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (hasNewTarget) {
-			tagetProp = target.GetComponent<UnitProperties> ();
-			tagetBuildingProp = target.GetComponent<BuildingProperties> ();
+			tragetProp = target.GetComponent<UnitProperties> ();
+			tragetBuildingProp = target.GetComponent<BuildingProperties> ();
 			fighterProp = transform.GetComponent<UnitProperties> ();
 			hasNewTarget = false;
 			nextActionTime = Time.time + fighterProp.actionSpeed;
 		}
 		if (target != null) {
 			if (Time.time >= nextActionTime) {
-				if (tagetProp != null) {
-					tagetProp.life -= findDamage (target);
-				} else if (tagetBuildingProp != null) {
-					tagetBuildingProp.life -= fighterProp.buildingDamage;
+				if (tragetProp != null) {
+					tragetProp.life -= findDamage (target);
+				} else if (tragetBuildingProp != null) {
+					tragetBuildingProp.life -= fighterProp.buildingDamage;
 				}
 				nextActionTime = Time.time + fighterProp.actionSpeed;
 			}
