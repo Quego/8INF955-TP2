@@ -9,4 +9,13 @@ public class LoadSceneOnClick : MonoBehaviour {
 		//Async?
 		SceneManager.LoadScene (sceneIndex);
 	}
+
+	public void loadByName(string sceneName){
+		SceneManager.LoadScene (sceneName);
+	}
+
+	public void loadAdditiveByName(string sceneName){
+		Debug.Log ("loadAddictiveByName");
+		SceneManager.LoadScene (sceneName, LoadSceneMode.Additive);
+	}
 }
