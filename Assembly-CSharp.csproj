@@ -3,8 +3,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{4FF94FC0-061B-A348-C9B5-82009C75222A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -33,56 +34,57 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Game\BaseDestroyed.cs" />
-    <Compile Include="Assets\Scripts\Game\BuildingManagement.cs" />
-    <Compile Include="Assets\Scripts\Game\BuildingProperties.cs" />
-    <Compile Include="Assets\Scripts\Game\ChangeUiOnSelect.cs" />
-    <Compile Include="Assets\Scripts\Game\EndGame.cs" />
-    <Compile Include="Assets\Scripts\Game\EnemyUnitBuilder.cs" />
-    <Compile Include="Assets\Scripts\Game\EnemyUnitController.cs" />
-    <Compile Include="Assets\Scripts\Game\FighterController.cs" />
-    <Compile Include="Assets\Scripts\Game\GatherController.cs" />
-    <Compile Include="Assets\Scripts\Game\HandlePause.cs" />
-    <Compile Include="Assets\Scripts\Game\InputController.cs" />
-    <Compile Include="Assets\Scripts\Game\MouseOverCanvas.cs" />
-    <Compile Include="Assets\Scripts\Game\PlayerData.cs" />
-    <Compile Include="Assets\Scripts\Game\ResourceProperties.cs" />
-    <Compile Include="Assets\Scripts\Game\UnitController.cs" />
-    <Compile Include="Assets\Scripts\Game\UnitManagement.cs" />
-    <Compile Include="Assets\Scripts\Game\UnitProperties.cs" />
-    <Compile Include="Assets\Scripts\UI\ChangeMusic.cs" />
-    <Compile Include="Assets\Scripts\UI\ClickToLoadAsync.cs" />
-    <Compile Include="Assets\Scripts\UI\CloseOnQuit.cs" />
-    <Compile Include="Assets\Scripts\UI\ColorOnHighlight.cs" />
-    <Compile Include="Assets\Scripts\UI\DesactiveOnWait.cs" />
-    <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
-    <Compile Include="Assets\Scripts\UI\LoadOnClick.cs" />
-    <Compile Include="Assets\Scripts\UI\LoadOnEnter.cs" />
-    <Compile Include="Assets\Scripts\UI\LoadSceneOnClick.cs" />
-    <Compile Include="Assets\Scripts\UI\QuitOnClick.cs" />
-    <Compile Include="Assets\Scripts\UI\QuitOnEnter.cs" />
-    <Compile Include="Assets\Scripts\UI\SelectOnInput.cs" />
-    <Compile Include="Assets\Scripts\UI\SetEFXVolume.cs" />
-    <Compile Include="Assets\Scripts\UI\SetMusicVolume.cs" />
-    <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
-    <None Include="Assets\Sprites\SF UI\Background\LICENSE.txt" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Scripts\Game\BaseDestroyed.cs" />
+     <Compile Include="Assets\Scripts\Game\BuildingManagement.cs" />
+     <Compile Include="Assets\Scripts\Game\BuildingProperties.cs" />
+     <Compile Include="Assets\Scripts\Game\ChangeUiOnSelect.cs" />
+     <Compile Include="Assets\Scripts\Game\EndGame.cs" />
+     <Compile Include="Assets\Scripts\Game\EnemyUnitBuilder.cs" />
+     <Compile Include="Assets\Scripts\Game\EnemyUnitController.cs" />
+     <Compile Include="Assets\Scripts\Game\FighterController.cs" />
+     <Compile Include="Assets\Scripts\Game\GatherController.cs" />
+     <Compile Include="Assets\Scripts\Game\HandlePause.cs" />
+     <Compile Include="Assets\Scripts\Game\InputController.cs" />
+     <Compile Include="Assets\Scripts\Game\MouseOverCanvas.cs" />
+     <Compile Include="Assets\Scripts\Game\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\Game\ResourceProperties.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitController.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitManagement.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitProperties.cs" />
+     <Compile Include="Assets\Scripts\UI\ChangeMusic.cs" />
+     <Compile Include="Assets\Scripts\UI\ClickToLoadAsync.cs" />
+     <Compile Include="Assets\Scripts\UI\CloseOnQuit.cs" />
+     <Compile Include="Assets\Scripts\UI\ColorOnHighlight.cs" />
+     <Compile Include="Assets\Scripts\UI\DesactiveOnWait.cs" />
+     <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadOnClick.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadOnEnter.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadSceneOnClick.cs" />
+     <Compile Include="Assets\Scripts\UI\QuitOnClick.cs" />
+     <Compile Include="Assets\Scripts\UI\QuitOnEnter.cs" />
+     <Compile Include="Assets\Scripts\UI\SelectOnInput.cs" />
+     <Compile Include="Assets\Scripts\UI\SetEFXVolume.cs" />
+     <Compile Include="Assets\Scripts\UI\SetMusicVolume.cs" />
+     <Compile Include="Assets\Scripts\UI\ShowCost.cs" />
+     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\Sprites\SF UI\Background\LICENSE.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -92,7 +94,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <Folder Include="Assets\Scripts\Game\" />
-  </ItemGroup>
+  
 </Project>

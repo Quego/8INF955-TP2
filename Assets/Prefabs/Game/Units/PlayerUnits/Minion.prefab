@@ -126,7 +126,7 @@ MonoBehaviour:
   unitCost: 1
   actionSpeed: 1
   speed: 5
-  life: 5
+  life: 20
   level: 1
   buildingDamage: 0
   damageUnits:

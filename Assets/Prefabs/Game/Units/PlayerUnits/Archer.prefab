@@ -258,16 +258,18 @@ MonoBehaviour:
   unitCost: 5
   actionSpeed: 1
   speed: 5
-  life: 5
+  life: 20
   level: 1
   buildingDamage: 1
   damageUnits:
-  - damage: 1
+  - damage: 3
     unit: {fileID: 1000013201706556, guid: a70c9237536d5b345aca29d5ea50841d, type: 2}
-  - damage: 1
+  - damage: 5
     unit: {fileID: 1000010483683662, guid: 516a4853588fcbf41b3960e56703dfb6, type: 2}
   - damage: 1
     unit: {fileID: 1000010332474842, guid: d11c309d2c54bd54fb8df6834f2d2124, type: 2}
+  - damage: 2
+    unit: {fileID: 1000012900169558}
 --- !u!114 &114000013517691378
 MonoBehaviour:
   m_ObjectHideFlags: 1
