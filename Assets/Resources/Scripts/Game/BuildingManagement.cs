@@ -8,7 +8,6 @@ public class BuildingManagement : MonoBehaviour {
 	public float destroyPopUpAfterSeconds;
 	public int percentageBackWhenDestroy;
 
-	//TODO remove comments on null check 
 
 	void Start(){
 		//if not defined in inspector, define here

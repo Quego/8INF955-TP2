@@ -15,10 +15,12 @@ public class EnemyUnitBuilder : MonoBehaviour {
 			spawnStartTime = 10;
 		if (spawnRepeatTime == 0)
 			spawnRepeatTime = 60;
-		
+		//it calls the method build after spawnStartTime seconds and it recalls this methods all spawnRepeatTime seconds
 		InvokeRepeating("build", spawnStartTime, spawnRepeatTime);
 	}
 
+
+	//it creates a unit of the buildFactory
 	public void build (){
 		UnitProperties properties = toBuild.GetComponent<UnitProperties> ();
 		BuildingProperties factoryProperties = buildFactory.GetComponent<BuildingProperties> ();
