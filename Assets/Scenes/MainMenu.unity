@@ -2947,7 +2947,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7cb2912222469634ba17a77055919ea8, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 1
@@ -2959,12 +2959,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum
+  m_Text: "Clic Gauche : S\xE9lectionner une entit\xE9\nClic Droit : donner une cible
+    \xE0 l'unit\xE9 (peut ramasser ou attaquer la cible)\nMolette souris : Zoomer
+    / D\xE9zoomer\nPointeur sur les c\xF4t\xE9s de la carte : d\xE9placement de la
+    cam\xE9ra\n\nD\xE9truisez le bat\xEEment principal adversaire avant qu'il ne d\xE9truise
+    le votre !\n( Il attaquera en priorit\xE9 vos unit\xE9s si vous en avez 5 ou plus
+    )\n"
 --- !u!222 &1540248053
 CanvasRenderer:
   m_ObjectHideFlags: 0
