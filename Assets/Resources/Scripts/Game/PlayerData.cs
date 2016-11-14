@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manage persistence of player data
+/// </summary>
 public class PlayerData : MonoBehaviour {
 
 	public static int level;
@@ -16,9 +19,9 @@ public class PlayerData : MonoBehaviour {
 	private static Text textIron;
 	private static Text textUnits;
 
-	// Use this for initialization
-	void Start () {
 
+	void Start () {
+		//Initialise variables
 		maxUnits = 200;
 		food = 1000;
 		wood = 1000;
@@ -33,7 +36,10 @@ public class PlayerData : MonoBehaviour {
 
 		updateResourceView ();
 	}
-	
+
+	/// <summary>
+	/// Updates the resource view texts.
+	/// </summary>
 	public static void updateResourceView(){
 		textFood.text = food.ToString();
 		textWood.text = wood.ToString();

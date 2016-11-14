@@ -1,6 +1,9 @@
 ﻿ using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Handle music changes
+/// </summary>
 public class ChangeMusic : MonoBehaviour {
 
 	public AudioClip level2Music;
@@ -12,7 +15,11 @@ public class ChangeMusic : MonoBehaviour {
 	 
 		source = GetComponent<AudioSource> ();
 	}
-	
+
+	/// <summary>
+	/// Change music on level was loaded event.
+	/// </summary>
+	/// <param name="level">the loaded level</param>
 	void OnLevelWasLoaded(int level)
 	{
 		if (level == 1)
