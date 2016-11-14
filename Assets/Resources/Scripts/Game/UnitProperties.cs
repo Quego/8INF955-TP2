@@ -26,7 +26,12 @@ public class UnitProperties : MonoBehaviour {
 
 	void Update()
 	{
-		if (life <= 0)
+		if (life <= 0) {
+			if (transform.CompareTag ("FriendlyUnit")) {
+				PlayerData.units -= unitCost;
+				PlayerData.updateResourceView ();
+			}
 			DestroyImmediate (gameObject);
+		}
 	}
 }
