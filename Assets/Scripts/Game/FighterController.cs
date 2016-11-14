@@ -10,6 +10,7 @@ public class FighterController : MonoBehaviour {
 	private BuildingProperties tragetBuildingProp;
 	private UnitProperties fighterProp;
 	private float nextActionTime;
+	private bool isTargetDead;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class FighterController : MonoBehaviour {
 		tragetBuildingProp = null;
 		fighterProp = null;
 		hasNewTarget = false;
+		isTargetDead = false;
 	}
 	
 	// Update is called once per frame
@@ -30,10 +32,16 @@ public class FighterController : MonoBehaviour {
 		}
 		if (target != null) {
 			if (Time.time >= nextActionTime) {
+				Debug.Log ("HIT");
 				if (tragetProp != null) {
 					tragetProp.life -= findDamage (target);
+					isTargetDead = tragetProp.life <= 0;
 				} else if (tragetBuildingProp != null) {
 					tragetBuildingProp.life -= fighterProp.buildingDamage;
+					isTargetDead = tragetBuildingProp.life <= 0;
+				}
+				if (isTargetDead) {
+					target = null;
 				}
 				nextActionTime = Time.time + fighterProp.actionSpeed;
 			}

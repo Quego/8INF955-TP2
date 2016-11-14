@@ -9,6 +9,7 @@ public class UnitController : MonoBehaviour {
 	private float speed;
 	public bool hasDestination;
 	private bool stoppedCurrentAction;
+	private bool attackTargetGiven;
 
 	private GatherController gatherer;
 	private FighterController fighter;
@@ -20,6 +21,7 @@ public class UnitController : MonoBehaviour {
 		destination = transform.position;
 		hasDestination = false;
 		stoppedCurrentAction = false;
+		attackTargetGiven = false;
 
 		gatherer = transform.GetComponent<GatherController> ();
 		fighter = transform.GetComponent<FighterController> ();
@@ -32,8 +34,10 @@ public class UnitController : MonoBehaviour {
 
 	private void moveToTarget()
 	{
+		if (targetGO == null)
+			hasDestination = false;
 		if (hasDestination) {
-			if (!stoppedCurrentAction) {
+			if (!stoppedCurrentAction && !targetGO.CompareTag ("EnemyUnit")) {
 				if (gatherer != null) {
 					gatherer.associatedResource = null;
 				}
@@ -41,18 +45,26 @@ public class UnitController : MonoBehaviour {
 					fighter.target = null;
 				}
 				stoppedCurrentAction = true;
+				attackTargetGiven = false;
 			}
 
 			transform.LookAt (destination);
 			transform.position += transform.forward * Time.smoothDeltaTime * speed;
 
 			//Arrive on target
-			if ((transform.position - destination).magnitude <= 0.1f) {
-				hasDestination = false;
+			if ((transform.position - destination).magnitude <= 0.5f) {
+
+				if(!targetGO.CompareTag("EnemyUnit"))
+					hasDestination = false;
 				actionOnArrive ();
 				stoppedCurrentAction = false;
 			}
 		}
+		if (targetGO!=null && targetGO.CompareTag ("EnemyUnit")) {
+			if ((transform.position - targetGO.transform.position).magnitude > 1f) 
+				destination = targetGO.transform.position;
+		}
+
 	}
 
 	void actionOnArrive()
@@ -63,9 +75,10 @@ public class UnitController : MonoBehaviour {
 			gatherer.hasNewAssociatedResource = true;
 		} 
 		//It's a unit focusing a ennemy entity
-		else if (targetGO.tag.Equals ("EnemyUnit") || targetGO.tag.Equals ("EnemyBuilding") && transform.GetComponent<GatherController> () == null) {
+		else if (!attackTargetGiven && targetGO.tag.Equals ("EnemyUnit") || targetGO.tag.Equals ("EnemyBuilding") && transform.GetComponent<GatherController> () == null) {
 			fighter.target = targetGO;
 			fighter.hasNewTarget = true;
+			attackTargetGiven = true;
 		}
 	}
 }

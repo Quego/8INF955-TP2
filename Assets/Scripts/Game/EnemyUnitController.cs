@@ -26,8 +26,6 @@ public class EnemyUnitController : MonoBehaviour {
 		destination = transform.position;
 		hasDestination = false;
 		targetList = GameObject.FindGameObjectsWithTag ("FriendlyUnit");
-		//gatherer = transform.GetComponent<GatherController> ();
-		//fighter = transform.GetComponent<FighterController> ();
 		fighterProp = transform.GetComponent<UnitProperties> ();
 		nextActionTime = Time.time + fighterProp.actionSpeed;
 	}
@@ -47,7 +45,7 @@ public class EnemyUnitController : MonoBehaviour {
 			//Arrive on target
 			if (targetGO != null) {
 				if (targetGO.tag.Equals ("FriendlyUnit")) {
-					if ((transform.position - destination).magnitude <= 0.1f) {
+					if ((transform.position - destination).magnitude <= 0.5f) {
 						actionOnArrive ();
 					}
 				} else if (targetGO.tag.Equals ("FriendlyBuilding")) {
@@ -69,7 +67,11 @@ public class EnemyUnitController : MonoBehaviour {
 			hasDestination = true;
 		}
 		if (targetGO != null) {
-			destination = targetGO.transform.position;
+			if (targetGO.tag.Equals ("FriendlyBuilding"))
+				destination = targetGO.transform.position + new Vector3 (4, 0, 0);
+			else
+				if ((transform.position - targetGO.transform.position + new Vector3 (1, 0, 0)).magnitude > 1f) 
+					destination = targetGO.transform.position + new Vector3 (1, 0, 0);
 		} else {
 			hasDestination = false;
 		}

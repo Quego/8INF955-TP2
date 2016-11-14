@@ -261,13 +261,13 @@ MonoBehaviour:
   buildingDamage: 1
   damageUnits:
   - damage: 1
-    unit: {fileID: 1000014074332098, guid: c5549cb20934c164e87ed6a484af7e38, type: 2}
+    unit: {fileID: 1000010332474842, guid: d11c309d2c54bd54fb8df6834f2d2124, type: 2}
   - damage: 5
     unit: {fileID: 1000010483683662, guid: 516a4853588fcbf41b3960e56703dfb6, type: 2}
   - damage: 3
-    unit: {fileID: 1000010765701754, guid: d47d1fea0e0cf0941a250dba3acdbd6f, type: 2}
+    unit: {fileID: 1000013201706556, guid: a70c9237536d5b345aca29d5ea50841d, type: 2}
   - damage: 2
-    unit: {fileID: 1000013495610182}
+    unit: {fileID: 1000012900169558, guid: 4057357cfcfd98b44aeb86b34791ba09, type: 2}
 --- !u!136 &136000012560824046
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -7,9 +7,16 @@ public class EnemyUnitBuilder : MonoBehaviour {
 	public GameObject playerBaseBuilding;
 	public GameObject buildFactory;
 	public GameObject toBuild;
+	public float spawnStartTime;
+	public float spawnRepeatTime;
 
 	void Start(){
-		InvokeRepeating("build", 10.0f, 120.0f);
+		if (spawnStartTime == 0)
+			spawnStartTime = 10;
+		if (spawnRepeatTime == 0)
+			spawnRepeatTime = 60;
+		
+		InvokeRepeating("build", spawnStartTime, spawnRepeatTime);
 	}
 
 	public void build (){

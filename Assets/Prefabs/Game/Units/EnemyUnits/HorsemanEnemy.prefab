@@ -347,7 +347,7 @@ MonoBehaviour:
   - damage: 3
     unit: {fileID: 1000010332474842, guid: d11c309d2c54bd54fb8df6834f2d2124, type: 2}
   - damage: 2
-    unit: {fileID: 1000010765701754}
+    unit: {fileID: 1000013201706556, guid: a70c9237536d5b345aca29d5ea50841d, type: 2}
 --- !u!136 &136000014096496728
 CapsuleCollider:
   m_ObjectHideFlags: 1
