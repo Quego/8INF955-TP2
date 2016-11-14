@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
+/// <summary>
+/// Manage End game.
+/// </summary>
 public class EndGame : MonoBehaviour {
 
-	//it calls when the popup with the message "You xin !" or "You lose !" is destroy !
+	/// <summary>
+	/// Load menu when the destroy event raised.
+	/// </summary>
 	public void OnDestroy(){
-		//it sends the player to the "Main Menu"'s scene
 		SceneManager.LoadScene ("MainMenu");
 	}
 }

@@ -10,12 +10,21 @@ public class ClickToLoadAsync : MonoBehaviour {
 
 	private AsyncOperation async;
 
+	/// <summary>
+	/// Launches loading view
+	/// </summary>
+	/// <param name="level">level to loed</param>
 	public void ClickAsync(int level)
 	{
 		loadingImage.SetActive (true);
 		StartCoroutine (LoadLevelWithBar (level));
 	}
 
+	/// <summary>
+	/// Updates the load bar until level's loaded.
+	/// </summary>
+	/// <returns>The level with bar.</returns>
+	/// <param name="level">Level.</param>
 	IEnumerator LoadLevelWithBar (int level)
 	{
 		async = SceneManager.LoadSceneAsync (level);

@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
+/// <summary>
+/// Unit properties.
+/// Defines all properties for a unit
+/// </summary>
 public class UnitProperties : MonoBehaviour {
 
 	public int woodCost;
@@ -16,6 +20,10 @@ public class UnitProperties : MonoBehaviour {
 
 	public int buildingDamage;
 
+	/// <summary>
+	/// Damage unit.
+	/// Defines damages that unit makes against other units
+	/// </summary>
 	[Serializable]
 	public struct DamageUnit {
 		public int damage;
@@ -24,7 +32,16 @@ public class UnitProperties : MonoBehaviour {
 
 	public List<DamageUnit> damageUnits;
 
+
 	void Update()
+	{
+		died ();
+	}
+
+	/// <summary>
+	/// Check if unit died. If so, update player Resources
+	/// </summary>
+	private void died()
 	{
 		if (life <= 0) {
 			if (transform.CompareTag ("FriendlyUnit")) {

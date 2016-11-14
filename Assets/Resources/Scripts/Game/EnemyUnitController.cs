@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Enemy unit behaviour.
+/// </summary>
 public class EnemyUnitController : MonoBehaviour {
 	public GameObject baseBuilding;
 	public Vector3 destination;
@@ -11,7 +14,6 @@ public class EnemyUnitController : MonoBehaviour {
 	private float speed;
 	public bool hasDestination;
 	private int maximumNumberPlayerUnitsToAttackPlayerBase = 5; 
-	//private GatherController gatherer;
 	private FighterController fighter;
 	private GameObject[] targetList;
 	private UnitProperties tragetProp;
@@ -21,6 +23,7 @@ public class EnemyUnitController : MonoBehaviour {
 
 
 	void Start () {
+		//initialise variables
 		properties = transform.GetComponent<UnitProperties> ();
 		speed = properties.speed;
 		destination = transform.position;
@@ -34,7 +37,9 @@ public class EnemyUnitController : MonoBehaviour {
 		moveToTarget ();
 	}
 
-
+	/// <summary>
+	/// Makes the unit move target, if there's no target, give one
+	/// </summary>
 	private void moveToTarget()
 	{
 		if (hasDestination) {
@@ -77,6 +82,9 @@ public class EnemyUnitController : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// The action to do when unit arrived to its destination
+	/// </summary>
 	void actionOnArrive()
 	{
 		if (targetGO.tag.Equals ("FriendlyUnit") || targetGO.tag.Equals ("FriendlyBuilding") ) {
@@ -93,6 +101,11 @@ public class EnemyUnitController : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Finds the damage that unit has to deal to its target
+	/// </summary>
+	/// <returns>The damage.</returns>
+	/// <param name="target">The unit targer</param>
 	private int findDamage(GameObject target)
 	{
 		for (int i = 0; i < fighterProp.damageUnits.Count; i++) {

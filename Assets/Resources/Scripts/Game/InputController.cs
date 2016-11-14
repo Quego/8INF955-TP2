@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Manage player inputs
+/// </summary>
 public class InputController : MonoBehaviour {
 
 	public GameObject defaultSelect;
@@ -43,6 +46,14 @@ public class InputController : MonoBehaviour {
 
 
 	void Update () {
+		handleInputs ();
+	}
+
+	/// <summary>
+	/// Handles useful player inputs
+	/// </summary>
+	private void handleInputs()
+	{
 		//Update here in case of screen resizing
 		offsetControllerX = Screen.width / screenDivider;
 		offsetControllerY = Screen.height / screenDivider;
@@ -66,7 +77,9 @@ public class InputController : MonoBehaviour {
 	}
 
 
-
+	/// <summary>
+	/// Makes camera moves according to cursor
+	/// </summary>
 	private void handleCameraMoves()
 	{
 		//moving left, right according to cursor
@@ -88,7 +101,9 @@ public class InputController : MonoBehaviour {
 		}
 	}
 
-
+	/// <summary>
+	/// Makes camera zoom in and out according to mouseWheel
+	/// </summary>
 	private void handleWheel()
 	{
 		//zooming in, out according to mouseWheel
@@ -99,6 +114,9 @@ public class InputController : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Handles the left click.
+	/// </summary>
 	private void handleLeftClick(){
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
@@ -121,6 +139,9 @@ public class InputController : MonoBehaviour {
 		} 
 	}
 
+	/// <summary>
+	/// Handles the right click.
+	/// </summary>
 	private void handleRightClick(){
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
@@ -145,6 +166,9 @@ public class InputController : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Handles the space bar.
+	/// </summary>
 	private void handleSpaceBar(){
 		if (selectedGO != null)
 			Camera.main.transform.position = new Vector3 (selectedGO.transform.position.x, Camera.main.transform.position.y, selectedGO.transform.position.z - Camera.main.transform.position.y);
@@ -154,6 +178,10 @@ public class InputController : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Selects object corresponding to player selection
+	/// </summary>
+	/// <param name="newSelection">The object to be selected</param>
 	public void selectObject(GameObject newSelection){
 
 		//show new selection
@@ -174,6 +202,11 @@ public class InputController : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Colors the player selection.
+	/// </summary>
+	/// <param name="toColor">The color to use</param>
+	/// <param name="previousSelection">The Previous player selection.</param>
 	private void colorSelection(GameObject toColor, GameObject previousSelection){
 
 		//Paint everything about selection in previous color

@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manage Building actions.
+/// </summary>
 public class BuildingManagement : MonoBehaviour {
 
 	public GameObject popup;
@@ -10,7 +13,7 @@ public class BuildingManagement : MonoBehaviour {
 
 
 	void Start(){
-		//if not defined in inspector, define here
+		//if not defined in inspector, initialise variables here
 		if (destroyPopUpAfterSeconds == 0)
 			destroyPopUpAfterSeconds = 5;
 		
@@ -18,9 +21,13 @@ public class BuildingManagement : MonoBehaviour {
 			percentageBackWhenDestroy = 10;
 	}
 
+	/// <summary>
+	/// Build the specified building.
+	/// </summary>
+	/// <param name="toBuild">The building to build</param>
 	public void build (GameObject toBuild){
 		BuildingProperties properties = toBuild.GetComponent<BuildingProperties> ();
-		//if (properties != null) {
+		if (properties != null) {
 			//check if there are enough resources
 			if (!toBuild.gameObject.activeSelf) {
 				if (buildSuccess (properties.foodCost, properties.woodCost, properties.ironCost)) {
@@ -36,14 +43,17 @@ public class BuildingManagement : MonoBehaviour {
 				Camera.main.transform.position = new Vector3 (toBuild.transform.position.x, Camera.main.transform.position.y, toBuild.transform.position.z - Camera.main.transform.position.y);
 				Camera.main.transform.GetComponentInChildren<InputController> ().selectObject (toBuild);
 			} 
-		//}
+		}
 	}
 
-
+	/// <summary>
+	/// Upgrade the specified building.
+	/// </summary>
+	/// <param name="toUpgrade">the building to be updgraded</param>
 	public void upgrade (GameObject toUpgrade){
 		BuildingProperties properties = toUpgrade.GetComponent<BuildingProperties> ();
 		int nextLevel = properties.level + 1;
-		//if (properties != null) {
+		if (properties != null) {
 			
 			if (toUpgrade.gameObject.activeSelf && buildSuccess (nextLevel * properties.foodCost,nextLevel * properties.woodCost, nextLevel * properties.ironCost)) {
 				properties.level++;
@@ -52,9 +62,13 @@ public class BuildingManagement : MonoBehaviour {
 			}
 			else
 				createPopUp ("upgrade",toUpgrade.name, nextLevel * properties.foodCost,nextLevel * properties.woodCost, nextLevel * properties.ironCost);
-		//}
+		}
 	}
 
+	/// <summary>
+	/// Destroy the specified building.
+	/// </summary>
+	/// <param name="toDestroy">The building to be destroyed</param>
 	public void destroy (GameObject toDestroy){
 		//find building requirements
 		BuildingProperties properties = toDestroy.GetComponent<BuildingProperties> ();
@@ -78,11 +92,21 @@ public class BuildingManagement : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Creates a pop up giving missing resources to build a building.
+	/// </summary>
+	/// <param name="changeType">"Upgrade" or "Create"</param>
+	/// <param name="name">Name of the building</param>
+	/// <param name="foodCost">Building Food cost.</param>
+	/// <param name="woodCost">Building Wood cost.</param>
+	/// <param name="ironCost">Building Iron cost.</param>
 	private void createPopUp(string changeType,string name,int foodCost,int woodCost, int ironCost){
 
+		//Remove existing popups
 		foreach (GameObject toDestroy in GameObject.FindGameObjectsWithTag("Popup"))
 			DestroyImmediate (toDestroy);
-		
+
+		//create new one an initialize attributes
 		GameObject popupGO = Instantiate (popup, GameObject.Find ("Canvas").transform) as GameObject;
 		popupGO.transform.localPosition = Vector3.zero;
 		popupGO.transform.localScale = Vector3.one;
@@ -99,8 +123,17 @@ public class BuildingManagement : MonoBehaviour {
 		popupGO.GetComponentInChildren<Text> ().text = textToSet;
 	}
 
+
+	/// <summary>
+	/// Try to build a building
+	/// </summary>
+	/// <returns><c>true</c>, if success was built, <c>false</c> otherwise.</returns>
+	/// <param name="food">Building Food cost</param>
+	/// <param name="wood">Building Wood cost</param>
+	/// <param name="iron">Building Iron cost</param>
 	private bool buildSuccess(int food,int wood, int iron){
 		if (PlayerData.food - food >= 0 && PlayerData.iron - iron >= 0 && PlayerData.wood - wood >= 0) {
+			//If it worked, take resources from player
 			PlayerData.food -= food;
 			PlayerData.wood -= wood;
 			PlayerData.iron -= iron;

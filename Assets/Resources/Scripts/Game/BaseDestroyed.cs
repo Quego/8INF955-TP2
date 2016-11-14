@@ -3,6 +3,9 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System;
 
+/// <summary>
+/// Handle actions when a base is destroyed
+/// </summary>
 public class BaseDestroyed : MonoBehaviour {
 	public GameObject baseBuilding;
 	public GameObject popup;
@@ -16,7 +19,14 @@ public class BaseDestroyed : MonoBehaviour {
 
 
 	void Update(){
-		//if the life of the base reaches 0, the game ends
+		checkBaseDestroyed ();
+	}
+
+	/// <summary>
+	/// Checks if the base destroyed.If so, show win or lose popup
+	/// </summary>
+	private void checkBaseDestroyed()
+	{
 		if (baseBuilding.GetComponent<BuildingProperties> ().life <= 0) {
 			//we delete all popups
 			foreach (GameObject toDestroy in GameObject.FindGameObjectsWithTag("Popup"))
@@ -37,7 +47,7 @@ public class BaseDestroyed : MonoBehaviour {
 
 			//we destroy it after few seconds to load the "Main Menu"'s scene
 			Destroy (popup, destroyPopUpAfterSeconds);
-		} 
+		}
 	}
 
 

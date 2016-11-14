@@ -2,6 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
+
+/// <summary>
+/// Manage a resource mine.
+/// </summary>
 public class ResourceProperties : MonoBehaviour {
 
 	public bool woodReward;
@@ -28,9 +32,16 @@ public class ResourceProperties : MonoBehaviour {
 
 
 	void Update(){
+		died ();
+	}
+
+	/// <summary>
+	/// Makes the resource disappeared when there are no more resources
+	/// </summary>
+	private void died()
+	{
 		if (alreadyGathered >= maxGathering) {
 			Destroy (gameObject);
 		}
-
 	}
 }

@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// Manage Unit moves and actions.
+/// </summary>
 public class UnitController : MonoBehaviour {
 
 	public GameObject targetGO;
@@ -16,6 +20,7 @@ public class UnitController : MonoBehaviour {
 
 
 	void Start () {
+		//Initialise variables
 		properties = transform.GetComponent<UnitProperties> ();
 		speed = properties.speed;
 		destination = transform.position;
@@ -31,12 +36,15 @@ public class UnitController : MonoBehaviour {
 		moveToTarget ();
 	}
 
-
+	/// <summary>
+	/// Makes the unit move target, if there's no target, give one
+	/// </summary>
 	private void moveToTarget()
 	{
 		if (targetGO == null)
 			hasDestination = false;
 		if (hasDestination) {
+			//if there's a new destination, reinitilise variables
 			if (!stoppedCurrentAction && !targetGO.CompareTag ("EnemyUnit")) {
 				if (gatherer != null) {
 					gatherer.associatedResource = null;
@@ -67,6 +75,9 @@ public class UnitController : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// The action to do when unit arrived to its destination
+	/// </summary>
 	void actionOnArrive()
 	{
 		//it's a minion with a resource targer
