@@ -696,7 +696,7 @@ MonoBehaviour:
   buildFactory: {fileID: 2139713554}
   toBuild: {fileID: 1000014074332098, guid: c5549cb20934c164e87ed6a484af7e38, type: 2}
   spawnStartTime: 30
-  spawnRepeatTime: 30
+  spawnRepeatTime: 60
 --- !u!1 &85621511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,7 +3484,7 @@ MonoBehaviour:
   buildFactory: {fileID: 1676241955}
   toBuild: {fileID: 1000010765701754, guid: d47d1fea0e0cf0941a250dba3acdbd6f, type: 2}
   spawnStartTime: 30
-  spawnRepeatTime: 30
+  spawnRepeatTime: 60
 --- !u!1001 &504848717
 Prefab:
   m_ObjectHideFlags: 0
@@ -7836,7 +7836,7 @@ MonoBehaviour:
   buildFactory: {fileID: 1431070477}
   toBuild: {fileID: 1000013495610182, guid: 9779076cbdbde1a4392ec8489c917402, type: 2}
   spawnStartTime: 30
-  spawnRepeatTime: 30
+  spawnRepeatTime: 60
 --- !u!4 &1212319473
 Transform:
   m_ObjectHideFlags: 0
