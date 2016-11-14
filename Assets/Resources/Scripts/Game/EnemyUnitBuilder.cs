@@ -20,7 +20,7 @@ public class EnemyUnitBuilder : MonoBehaviour {
 			spawnStartTime = 10;
 		if (spawnRepeatTime == 0)
 			spawnRepeatTime = 60;
-
+		
 		//Call build function repeatdly
 		InvokeRepeating("build", spawnStartTime, spawnRepeatTime);
 	}
