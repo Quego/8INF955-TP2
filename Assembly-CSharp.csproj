@@ -64,7 +64,6 @@
      <Compile Include="Assets\Resources\Scripts\Game\UnitProperties.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\ChangeMusic.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\ClickToLoadAsync.cs" />
-     <Compile Include="Assets\Resources\Scripts\UI\CloseOnQuit.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\ColorOnHighlight.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\DesactiveOnWait.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\DontDestroy.cs" />

@@ -21,6 +21,9 @@ public class ShowCost : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Shows the cost of selection.
+	/// </summary>
 	public void showCost(){
 		int f, w, i, lvl;
 		UnitProperties properties;
@@ -42,6 +45,12 @@ public class ShowCost : MonoBehaviour {
 		toShow.SetActive (true);
 	}
 
+	/// <summary>
+	/// Get the cost after factory level reduction
+	/// </summary>
+	/// <returns>The reduced.</returns>
+	/// <param name="cost">Initial Cost.</param>
+	/// <param name="factoryLevel">Factory level.</param>
 	private int costReduced(int cost, int factoryLevel)
 	{
 		return cost - (int)((factoryLevel-1) * cost* (factoryLevelPercentageReducer / 100f));
